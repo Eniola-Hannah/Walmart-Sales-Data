@@ -7,7 +7,7 @@
 - [Project Overview](#Project-Overview)
 - [Project Objective](#Project-Objective)
 - [Data Cleaning](#Data-Cleaning)
-- [Data Exploration and Insights Derived](#Exploration-&-Insights-Derived)
+- [Data Exploration and Insights Derived](#Exploration-and-Insights-Derived)
 - [Recommendation](#Recommendation)
 - [Repository Contents](#Repository-Contents)
 - [Conclusion](#Conclusion)
@@ -134,7 +134,7 @@ SET Time_of_Day = CASE WHEN Time BETWEEN "00:00:00" AND "12:00:00" THEN "Morning
 				       WHEN Time BETWEEN "12:00:01" AND "16:00:00" THEN "Afternoon"
                        ELSE "Evening" END;
 ```
-## Exploration-&-Insights-Derived
+## Exploration-and-Insights-Derived
 1. Unique Cities and Branch Locations: 3 unique cities with branches in each.
 2. Product Lines Analysis: 6 unique product lines with Electronics as the most selling.
 - Fashion is the most common product line among female customers while
