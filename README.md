@@ -134,7 +134,6 @@ SET Time_of_Day = CASE WHEN Time BETWEEN "00:00:00" AND "12:00:00" THEN "Morning
 				       WHEN Time BETWEEN "12:00:01" AND "16:00:00" THEN "Afternoon"
                        ELSE "Evening" END;
 ```
-
 ## Exploration-&-Insights-Derived
 1. Unique Cities and Branch Locations: 3 unique cities with branches in each.
 2. Product Lines Analysis: 6 unique product lines with Electronics as the most selling.
