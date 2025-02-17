@@ -53,7 +53,7 @@ GROUP BY Payment ORDER BY Payment DESC LIMIT 1;
 
 -- 3.	What is the most selling product line?
 SELECT Productline, SUM(Quantity) AS quantitySold FROM walmartsalesdata
-GROUP BY Productline ORDER BY mostSellingProduct DESC LIMIT 1;
+GROUP BY Productline ORDER BY quantitySold DESC LIMIT 1;
 
 -- 4.	What is the total revenue by month?
 SELECT MONTH(Date) FROM walmartsalesdata;
@@ -78,7 +78,7 @@ GROUP BY City ORDER BY cityRevenue DESC LIMIT 1;
 SELECT Productline, CONCAT("$", ROUND(SUM(Tax))) AS largestVAT FROM walmartsalesdata
 GROUP BY Productline ORDER BY largestVAT DESC LIMIT 1;
 
--- 9.	Fetch each product line and add a column to those product line showing "Good", "Bad". Good if "its" greater than average sales
+-- 9.	Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
 SELECT Productline, IF(AVG(COGS) > 307.587380, "Good", "Bad") AS newColumn FROM walmartsalesdata
 GROUP BY Productline;
 
@@ -129,10 +129,10 @@ GROUP BY CustomerType ORDER BY the_most_VAT DESC LIMIT 1;
 
 -- CUSTOMER
 -- 1.	How many unique customer types does the data have?
-SELECT COUNT(DISTINCT CustomerType) FROM walmartsalesdata;
+SELECT COUNT(DISTINCT CustomerType) uniqueCustomerType FROM walmartsalesdata;
 
 -- 2.	How many unique payment methods does the data have?
-SELECT COUNT(DISTINCT Payment) FROM walmartsalesdata;
+SELECT COUNT(DISTINCT Payment) AS uniquePaymentMethod FROM walmartsalesdata;
 
 -- 3.	What is the most common customer type?
 SELECT CustomerType, COUNT(CustomerType) AS most_common_customertype FROM walmartsalesdata
